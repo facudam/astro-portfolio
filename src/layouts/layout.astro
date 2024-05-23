@@ -3,7 +3,7 @@ interface Props {
     language: string,
     title: string,
     description: string,
-    iconImg: string
+    iconImg?: string
 }
 
 const { language, title, description, iconImg } = Astro.props
@@ -18,7 +18,7 @@ const { language, title, description, iconImg } = Astro.props
     <meta name="description" content={ description }>
     <title>{ title }</title>
 </head>
-<body>
+<body class="flex justify-center p-3">
     <slot />
 </body>
 </html>
