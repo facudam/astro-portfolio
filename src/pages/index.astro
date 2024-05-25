@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro"
 import BackgroundAbsolute from "../components/BackgroundAbsolute.astro"
 import Nav from '../components/nav/Nav.astro'
+import Header from "../components/header/Header.astro"
 ---
 <Layout 
     title="Facundo Cáceres | Web developer"
@@ -9,5 +10,6 @@ import Nav from '../components/nav/Nav.astro'
     language="en"
 >
    <BackgroundAbsolute /> 
-   <Nav />
+   <Nav project="Projects" skills="Skills" about="About" contact="Contact" language="ESP" />
+   <Header />
 </Layout>

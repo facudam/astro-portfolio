@@ -20,7 +20,7 @@ const { language, title, description, iconImg } = Astro.props
     <meta name="description" content={ description }>
     <title>{ title }</title>
 </head>
-<body class="flex justify-center p-3">
+<body class="flex justify-center items-center flex-col px-3 py-4">
     <slot />
 </body>
 </html>
@@ -28,5 +28,6 @@ const { language, title, description, iconImg } = Astro.props
 <style is:global>
     html {
         font-family: 'Inter Variable', sans-serif;
+        color: #fff;
     }
 </style>
