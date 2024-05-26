@@ -1,13 +1,25 @@
+---
+interface Props {
+    firstTitle: string,
+    firstLetter: string,
+    emphasizedWords: string,
+    restOfWords: string,
+    resume: string
+}
+
+const { firstTitle, firstLetter, emphasizedWords, restOfWords, resume } = Astro.props
+---
+
 <header class="w-full max-w-5xl py-28">
     <div class="flex gap-6 justify-between flex-wrap">
         <div class="w-full max-w-2xl">
-            <h1 class="text-5xl font-extrabold">Hey there! I'm Facundo Cáceres</h1>
-            <p class="my-4 text-lg">A <span class="text-cyan-500 font-medium">Full-Stack developer</span> and SEO optimizer based in Buenos Aires, Argentina. Programming and web development lover, with an equal ardor for playing guitars and composing music.</p>
+            <h1 class="text-5xl font-extrabold">{ firstTitle }</h1>
+            <p class="my-4 text-lg">{ firstLetter } <span class="text-cyan-500 font-medium">{ emphasizedWords}</span> { restOfWords }</p>
         </div>
         <img class="rounded-full w-44 h-44" src="foto.png" alt="profile" />
     </div>
     <div class="my-4 flex gap-3">
         <a href="https://www.linkedin.com/in/facundo-caceres-dev/" target="_blank" class="bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl border-2 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Linkedin</a>
-        <button class="font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 border-2 hover:text-cyan-500 hover:border-cyan-500">Resume</button>
+        <button class="font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 border-2 hover:text-cyan-500 hover:border-cyan-500">{ resume }</button>
     </div>
 </header>
