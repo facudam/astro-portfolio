@@ -1,15 +1,14 @@
 ---
 import Layout from "../layouts/Layout.astro"
-import BackgroundAbsolute from "../components/BackgroundAbsolute.astro"
 import Nav from '../components/nav/Nav.astro'
 import Header from "../components/header/Header.astro"
+import Skills from "../sections/skills/Skills.astro"
 ---
 <Layout 
     title="Facundo Cáceres | Web developer"
     description="Facundo Cáceres, a web developer dedicated to excellence. Explore my projects and see how I can help with your next web challenge. Click to learn more!"
     language="en"
 >
-   <BackgroundAbsolute /> 
    <Nav project="Projects" skills="Skills" about="About" contact="Contact" language="ESP" />
    <Header 
     firstTitle="Hi there! I'm Facundo Cáceres"
@@ -18,4 +17,5 @@ import Header from "../components/header/Header.astro"
     restOfWords="and SEO optimizer based in Buenos Aires, Argentina. Programming and web development lover, with an equal ardor for playing guitars and composing music." 
     resume="Resume"
     />
+    <Skills title="Skills" />
 </Layout>
