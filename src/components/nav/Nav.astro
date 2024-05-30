@@ -2,19 +2,17 @@
 import Logo from '../../ui elements/logo/Logo.astro'
 interface Props {
     project: string,
-    skills: string,
     about: string,
     contact: string,
     language: string
 }
 
-const { project, skills, about, contact, language} = Astro.props
+const { project, about, contact, language} = Astro.props
 ---
 <nav class="flex justify-between w-full max-w-5xl sticky">
     <Logo />
     <ul class="flex gap-6 font-medium">
         <a class="cursor-pointer"><li>{ project }</li></a>
-        <a class="cursor-pointer"><li>{ skills }</li></a>
         <a class="cursor-pointer"><li>{ about }</li></a>
         <a class="cursor-pointer"><li>{ contact }</li></a>
     </ul>

@@ -3,13 +3,15 @@ import Layout from "../layouts/Layout.astro"
 import Nav from '../components/nav/Nav.astro'
 import Header from "../components/header/Header.astro"
 import Skills from "../sections/skills/Skills.astro"
+import Projects from "../sections/projects/Projects.astro"
+import CloseKey from "../ui elements/llaves/CloseKey.astro"
 ---
 <Layout 
     title="Facundo Cáceres | Web developer"
     description="Facundo Cáceres, a web developer dedicated to excellence. Explore my projects and see how I can help with your next web challenge. Click to learn more!"
     language="en"
 >
-   <Nav project="Projects" skills="Skills" about="About" contact="Contact" language="ESP" />
+   <Nav project="Projects" about="About" contact="Contact" language="ESP" />
    <Header 
     firstTitle="Hi there! I'm Facundo Cáceres"
     firstLetter="A"
@@ -18,4 +20,5 @@ import Skills from "../sections/skills/Skills.astro"
     resume="Resume"
     />
     <Skills title="Skills" />
+    <Projects title="Projects" />
 </Layout>
