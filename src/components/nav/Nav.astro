@@ -9,7 +9,8 @@ interface Props {
 
 const { project, about, contact, language} = Astro.props
 ---
-<nav class="flex justify-between w-full max-w-5xl sticky">
+
+<nav class="flex justify-between w-full max-w-5xl">
     <Logo />
     <ul class="flex gap-6 font-medium">
         <a class="cursor-pointer"><li>{ project }</li></a>
@@ -18,3 +19,4 @@ const { project, about, contact, language} = Astro.props
     </ul>
     <a href="">{ language }</a>
 </nav>
+

@@ -5,20 +5,22 @@ interface Props {
     description: string,
     tecnologies: string[],
     codeLink: string,
-    website?: string
+    website?: string,
+    codeBtnText: string,
+    liveBtnText: string
 }
 
-const { title, image, description, tecnologies, codeLink, website } = Astro.props;
+const { title, image, description, tecnologies, codeLink, website, codeBtnText, liveBtnText } = Astro.props;
 ---
 
 <div class="flex flex-col gap-5  md:flex-row ">
-    <div class="h-56 overflow-hidden transition-all w-full max-w-md border border-stone-600 flex justify-center items-center rounded-md group bg-gradient-to-r from-blue-500 to-violet-900">
-        <img class="group-hover:scale-110 transition duration-700 md:w-full" src={ image } />
+    <div class="h-56 overflow-hidden transition duration-700 w-full border border-stone-600 flex justify-center items-center rounded-md group bg-gradient-to-r from-blue-500 to-violet-900 hover:from-violet-900 hover:to-blue-500 md:max-w-xs md:min-w-80">
+        <img class="group-hover:scale-110 transition duration-700" src={ image } />
     </div>
     <div>
         <div>
             <h3 class="text-xl font-black mb-2">{ title }</h3>
-            <p>{ description }</p>
+            <p class="text-slate-100">{ description }</p>
         </div>
         <div class="flex gap-2 flex-wrap my-3">
             {
@@ -29,19 +31,17 @@ const { title, image, description, tecnologies, codeLink, website } = Astro.prop
         </div>
 
         <div class="flex gap-3 mt-5">
-            <a class="flex justify-center items-center gap-1 w-20 px-4 py-1 rounded-lg bg-slate-300" href={ codeLink }>
+            <a class="flex justify-center items-center gap-1 w-20 px-4 py-1 rounded-lg bg-slate-200 hover:bg-slate-50 transition-all" target="_blank" href={ codeLink }>
                 <img class="w-6" src="github.webp"/>
-                <span class="text-slate-900 font-semibold">code</span>
+                <span class="text-slate-900 font-semibold">{ codeBtnText }</span>
             </a>
             {
                 website &&
-                    <a class="flex justify-center items-center gap-1 w-20 px-4 py-1 rounded-lg bg-slate-300" href={ website }>
+                    <a class="flex justify-center items-center gap-1 w-20 px-4 py-1 rounded-lg bg-slate-200 hover:bg-slate-50 transition-all" target="_blank" href={ website }>
                         <img class="w-6" src="eye.webp"/>
-                        <span class="text-slate-900 font-semibold">Live</span>
+                        <span class="text-slate-900 font-semibold">{ liveBtnText }</span>
                     </a>            
             }
         </div>
-            
-        
     </div>
 </div>
