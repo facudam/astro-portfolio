@@ -2,21 +2,25 @@
 import OldPictCtn from '../../ui elements/OldPicCtn/OldPictCtn.astro';
 
 interface Props {
-    title: string
+    title: string,
+    secondTitle: string,
+    paragraphs: string[]
 }
 
-const { title } = Astro.props;
+const { title, secondTitle, paragraphs } = Astro.props;
 ---
-<section class="w-full max-w-5xl mt-24">
+<section id="about" class="w-full max-w-5xl mt-24">
     <h2 class="text-2xl font-black">{ title }</h2>
     <div class="mt-5 relative flex flex-col gap-7 items-center md:flex-row">
         <OldPictCtn src='about.webp' />
         
         <div class="flex flex-col gap-2">
-            <h3 class="font-semibold ">How I started programming</h3>
-            <p>Before diving into the world of programming, I was fascinated by search engine optimization (SEO) and its impact on website visibility and user engagement. I learned the ins and outs of optimizing websites for search engines and achieved excellent results while applying it to personal websites.</p>
-            <p>Currently, I am pursuing my programming education at university while also being a self-taught learner. I thrive on continuously expanding my skill set and staying up to date with the latest industry trends.</p>
-            <p>I am thrilled to apply my programming and SEO skills in a professional setting and would be delighted to contribute as part of your team!</p>
+            <h3 class="font-semibold ">{ secondTitle }</h3>
+            {
+                paragraphs.map(line => (
+                    <p>{ line }</p>
+                ))
+            }
         </div>
     </div>
 </section>
