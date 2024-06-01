@@ -1,0 +1,17 @@
+---
+interface Props {
+    developed: string,
+    portfolio: string,
+    codeText: string,
+    created: string
+}
+const { developed, portfolio, codeText, created } = Astro.props;
+---
+
+<footer class="my-6 pt-12 flex flex-col justify-center items-center text-slate-300">
+    <span>{ developed }</span>
+    <span>{ portfolio } 
+        <a class="text-sky-700" href="https://github.com/facudam/astro-portfolio/tree/develop" target="_blank" rel="noopener noreferrer">{ codeText }</a>
+    </span>
+    <span class="italic text-sm mt-2">{ created }</span>
+</footer>
