@@ -10,13 +10,15 @@ interface Props {
 const { project, about, contact, language} = Astro.props
 ---
 
-<nav class="flex justify-between w-full max-w-5xl">
+<nav class="flex justify-between items-center w-full max-w-5xl ">
     <Logo />
-    <ul class="flex gap-6 font-medium">
-        <a class="cursor-pointer" href="#projects"><li>{ project }</li></a>
-        <a class="cursor-pointer" href="#about"><li>{ about }</li></a>
-        <a class="cursor-pointer" href="https://www.linkedin.com/in/facundo-caceres-dev" target="_blank" rel="noopener noreferrer"><li>{ contact }</li></a>
+    <ul class="flex gap-3 font-medium py-2 md:gap-7">
+        <a class="cursor-pointer hover:text-sky-600 transition" href="#projects"><li>{ project }</li></a>
+        <a class="cursor-pointer hover:text-sky-600 transition" href="#about"><li>{ about }</li></a>
+        <a class="cursor-pointer hover:text-sky-600 transition" href="https://www.linkedin.com/in/facundo-caceres-dev" target="_blank" rel="noopener noreferrer">
+            <li>{ contact }</li>
+        </a>
     </ul>
-    <a href="">{ language }</a>
+    <a class="hover:text-sky-600  uppercase" href="">{ language }</a>
 </nav>
 
