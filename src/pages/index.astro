@@ -1,18 +1,25 @@
 ---
-import Layout from "../layouts/Layout.astro"
+import Layout from '../layouts/layout.astro'
 import Nav from '../components/nav/Nav.astro'
 import Header from "../components/header/Header.astro"
 import Skills from "../sections/skills/Skills.astro"
 import Projects from "../sections/projects/Projects.astro"
 import About from "../sections/about/About.astro"
 import Footer from "../components/footer/Footer.astro"
+import ProjectComponent from '../components/projectComponent/ProjectComponent.astro'
 ---
-<Layout 
+<Layout
     title="Facundo Cáceres | Web developer"
     description="Facundo Cáceres, a web developer dedicated to excellence. Explore my projects and see how I can help with your next web challenge. Click to learn more!"
     language="en"
 >
-   <Nav project="Projects" about="About" contact="Contact" language="ESP" />
+   <Nav 
+    project="Projects" 
+    about="About" 
+    contact="Contact" 
+    language="ESP"
+    pageLink='/es'
+    />
    <Header 
     firstTitle="Hi there! I'm Facundo Cáceres"
     firstLetter="A"
@@ -22,7 +29,58 @@ import Footer from "../components/footer/Footer.astro"
     resume="Resume"
     />
     <Skills title="Skills" />
-    <Projects title="Projects" />
+    <Projects title="Projects">
+        <ProjectComponent 
+            title='CoursesLibra' 
+            image='web.webp' 
+            description='A web application that offers a diverse range of IT courses from various platforms, aiming to simplify the search for the perfect course with advanced filters. Users can create accounts, add courses, share feedback, and rate completed courses.'
+            tecnologies={[ 'React.JS', 'TypeScript', 'CSS Modules', 'Node.JS', 'MySQL', 'Express', 'JWT' ]}
+            codeLink='https://github.com/facudam/fullstack-courses-app'
+            website='https://courseslibra.vercel.app'
+            codeBtnText='Code'
+            liveBtnText='Live'
+        />
+        <ProjectComponent 
+            title='Mercado Libre Clone' 
+            image='meliclon.webp' 
+            description='A clone of the popular e-commerce platform. It includes interactivity and queries to its API. Shopping cart and an extra product comparison functionality for desktop.'
+            tecnologies={[ 'React.JS', 'CSS', 'Context api', 'UseReducer', 'LocalStorage', 'SwipperJs' ]}
+            codeLink='https://github.com/facudam/mercado-libre-app'
+            website='https://e-commerce-libre.vercel.app/'
+            codeBtnText='Code'
+            liveBtnText='Live'
+        />
+        <ProjectComponent 
+            title='Typing Speed Game' 
+            image='typing.webp' 
+            description='An online game for desktop designed to enhance your typing skills and speed, tracking your progress and having fun trying to break your own record.'
+            tecnologies={[ 'React.JS', 'CSS', 'Context api', 'LocalStorage' ]}
+            codeLink='https://github.com/facudam/typing-speed-game'
+            website='https://typing-speed-game1.vercel.app/'
+            codeBtnText='Code'
+            liveBtnText='Live'
+        />
+        <ProjectComponent 
+            title='Medical Files APP' 
+            image='fichasmedicas.webp' 
+            description='A CRUD web app that allows for patient registration, adding medical consultations, and keeping medical records up to date.'
+            tecnologies={[ 'React.JS', 'CSS', 'Context api', 'UseReducer' ]}
+            codeLink='https://github.com/facudam/fichas-medicas-app'
+            website='https://fichas-medicas-app.vercel.app/'
+            codeBtnText='Code'
+            liveBtnText='Live'
+        />
+        <ProjectComponent 
+            title='DivsCreator' 
+            image='divscreator.webp' 
+            description='An online application for designing and customizing cards for websites. It allows users to adjust colors, texts, shadows, and more, and automatically generates the HTML and CSS code.'
+            tecnologies={[ 'HTML', 'CSS', 'JavaScript' ]}
+            codeLink='https://github.com/facudam/divs-creator'
+            website='https://divs-creator.vercel.app/'
+            codeBtnText='Code'
+            liveBtnText='Live'
+        />
+    </Projects>
     <About 
         title="About Me" 
         secondTitle="How I started Programming"

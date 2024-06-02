@@ -1,0 +1,95 @@
+---
+import Layout from '../layouts/layout.astro'
+import Nav from '../components/nav/Nav.astro'
+import Header from "../components/header/Header.astro"
+import Skills from "../sections/skills/Skills.astro"
+import Projects from "../sections/projects/Projects.astro"
+import About from "../sections/about/About.astro"
+import Footer from "../components/footer/Footer.astro"
+import ProjectComponent from '../components/projectComponent/ProjectComponent.astro'
+---
+<Layout
+    title="Facundo Cáceres | Desarrollador web"
+    description="Facundo Cáceres, un desarrollador web dedicado a la excelencia. Explora mis proyectos y descubre cómo puedo ayudarte con tu próximo desafío web. ¡Haz clic para saber más!"
+    language="es"
+>
+   <Nav 
+    project="Proyectos" 
+    about="Acerca" 
+    contact="Contacto" 
+    language="ENG"
+    pageLink='/' 
+    />
+   <Header 
+    firstTitle="¡Hola! Soy Facundo Cáceres"
+    firstLetter="Un"
+    emphasizedWords="Desarrollador Web"
+    restOfWords=" y optimizador SEO con sede en Buenos Aires, Argentina. Amante de la programación y el desarrollo web, con el mismo amor por la guitarra y la composición musical." 
+    resumeLink="https://drive.google.com/file/d/1JqdGZ-42ok491f5eThx-ow74HUU5sklT/view"
+    resume="Mi CV"
+    />
+    <Skills title="Habilidades" />
+    <Projects title="Proyectos">
+        <ProjectComponent 
+            title='CoursesLibra' 
+            image='web.webp' 
+            description='Una aplicación web que ofrece una amplia gama de cursos IT de diferentes plataformas, con el objetivo de simplificar la búsqueda del curso perfecto mediante filtros avanzados. Los usuarios pueden crear cuentas, agregar cursos, compartir comentarios y calificar los cursos completados.'
+            tecnologies={[ 'React.JS', 'TypeScript', 'CSS Modules', 'Node.JS', 'MySQL', 'Express', 'JWT' ]}
+            codeLink='https://github.com/facudam/fullstack-courses-app'
+            website='https://courseslibra.vercel.app'
+            codeBtnText='Repo'
+            liveBtnText='Vivo'
+        />
+        <ProjectComponent 
+            title='Mercado Libre Clon' 
+            image='meliclon.webp' 
+            description='Un clon de la popular plataforma de comercio electrónico. Incluye interactividad y consultas a su API. Carrito de compras y una funcionalidad adicional de comparación de productos para escritorio.'
+            tecnologies={[ 'React.JS', 'CSS', 'Context api', 'UseReducer', 'LocalStorage', 'SwipperJs' ]}
+            codeLink='https://github.com/facudam/mercado-libre-app'
+            website='https://e-commerce-libre.vercel.app/'
+            codeBtnText='Repo'
+            liveBtnText='Vivo'
+        />
+        <ProjectComponent 
+            title='Typing Speed Game' 
+            image='typing.webp' 
+            description='Un juego en línea para escritorio diseñado para mejorar tus habilidades y velocidad al tipear, seguir tu progreso y divertirte intentando batir tu propio récord.'
+            tecnologies={[ 'React.JS', 'CSS', 'Context api', 'LocalStorage' ]}
+            codeLink='https://github.com/facudam/typing-speed-game'
+            website='https://typing-speed-game1.vercel.app/'
+            codeBtnText='Repo'
+            liveBtnText='Vivo'
+        />
+        <ProjectComponent 
+            title='Fichas Médicas APP' 
+            image='fichasmedicas.webp' 
+            description='Una aplicación web CRUD que permite registrar pacientes, agregar consultas médicas y mantener actualizados los registros de los pacientes.'
+            tecnologies={[ 'React.JS', 'CSS', 'Context api', 'UseReducer' ]}
+            codeLink='https://github.com/facudam/fichas-medicas-app'
+            website='https://fichas-medicas-app.vercel.app/'
+            codeBtnText='Repo'
+            liveBtnText='Vivo'
+        />
+        <ProjectComponent 
+            title='DivsCreator' 
+            image='divscreator.webp' 
+            description='Una aplicación web para el diseño y la personalización de cards para sitios web. Permite a los usuarios ajustar colores, textos, sombras y más, y genera automáticamente el código HTML y CSS.'
+            tecnologies={[ 'HTML', 'CSS', 'JavaScript' ]}
+            codeLink='https://github.com/facudam/divs-creator'
+            website='https://divs-creator.vercel.app/'
+            codeBtnText='Repo'
+            liveBtnText='Vivo'
+        />
+    </Projects>
+    <About 
+        title="Sobre mí" 
+        secondTitle="Cómo comencé a programar"
+        paragraphs={ ["Antes de sumergirme en el mundo de la programación, me fascinaba la optimización de motores de búsqueda (SEO) y su impacto en la visibilidad de los sitios web y la participación de los usuarios. Aprendí los pormenores de la optimización web para motores de búsqueda y obtuve excelentes resultados al aplicarlo a sitios web personales.", "Actualmente, estoy cursando mi educación en programación en la universidad y al mismo tiempo soy autodidacta. Prospero ampliando continuamente mis habilidades y manteniéndome actualizado con las últimas tendencias de la industria.", "¡Estoy entusiasmado por poder aplicar mis habilidades de programación y SEO en un entorno profesional y estaría encantado de contribuir como parte de tu equipo!"] } 
+    />
+    <Footer
+        developed="Desarrollado por Facundo Cáceres - 2024"
+        portfolio="Código del"
+        codeText="portafolio"
+        created="Creado con Astro & Tailwind"
+    />
+</Layout>
