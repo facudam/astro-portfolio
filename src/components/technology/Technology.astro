@@ -8,7 +8,7 @@ interface Props {
 const { imageLink, alt, title } = Astro.props;
 ---
 
-<figure class="relative  w-14 h-14 flex border border-stone-300 rounded-lg justify-center items-center group">
-    <img class="w-7" src={ imageLink } alt={ alt }/>
+<figure class="relative  w-14 h-14 flex justify-center items-center group">
+    <img class="w-full" src={ imageLink } alt={ alt }/>
     <span class='text-white absolute -bottom-7 text-sm opacity-0 group-hover:opacity-100 font-semibold transition'>{ title }</span>  
 </figure>
