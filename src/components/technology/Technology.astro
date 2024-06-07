@@ -9,6 +9,6 @@ const { imageLink, alt, title } = Astro.props;
 ---
 
 <figure class="relative  w-14 h-14 flex justify-center items-center group">
-    <img class="w-full" src={ imageLink } alt={ alt }/>
-    <span class='text-white absolute -bottom-7 text-sm opacity-0 group-hover:opacity-100 font-semibold transition'>{ title }</span>  
+    <img class="w-full group-hover:blur-lg transition" src={ imageLink } alt={ alt }/>
+    <span class='text-white absolute text-sm md:text-base opacity-0  group-hover:opacity-100 font-semibold transition'>{ title }</span>  
 </figure>
