@@ -1,5 +1,6 @@
 ---
 import Logo from '../../ui elements/logo/Logo.astro'
+import HamburgerBtn from '../hamburgerBtn/HamburgerBtn.astro'
 interface Props {
     project: string,
     about: string,
@@ -13,6 +14,7 @@ const { project, about, contact, language, pageLink } = Astro.props
 
 <nav class="flex justify-between items-center w-full max-w-5xl ">
     <Logo />
+    <HamburgerBtn client:load/>
     <ul class="flex gap-3 md:text-lg font-medium py-2 md:gap-7">
         <a class="cursor-pointer hover:text-cyan-500 transition" href="#projects"><li>{ project }</li></a>
         <a class="cursor-pointer hover:text-cyan-500 transition" href="#about"><li>{ about }</li></a>
