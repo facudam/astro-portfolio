@@ -1,11 +1,13 @@
 ---
 ---
-
-<div class='hamburger-menu w-9 h-9 relative bg-cyan-500 flex flex-col justify-around rounded-full p-2 cursor-pointer'>
-    <span class="block bg-white w-full h-1 transition"></span>
-    <span class="block bg-white w-full h-1 transition"></span>
-    <span class="block bg-white w-full h-1 transition"></span>
+<div class="fixed right-4 bottom-32 z-50 md:hidden">
+    <div class='hamburger-menu w-9 h-9 relative bg-cyan-500 flex flex-col justify-around rounded-full p-2 cursor-pointer shadow-lg'>
+        <span class="block bg-white w-full h-1 transition"></span>
+        <span class="block bg-white w-full h-1 transition"></span>
+        <span class="block bg-white w-full h-1 transition"></span>
+    </div>
 </div>
+
 
 <style>
     .hamburger-menu.active-hamburger > span:first-child {
@@ -29,6 +31,7 @@
 <script>
     const pressHamburgerBtn = () => {
         document.querySelector('.hamburger-menu')?.classList.toggle('active-hamburger');
+        document.querySelector('.menu')?.classList.toggle('active-menu');
     }
 
     document.addEventListener('DOMContentLoaded', () => {
