@@ -16,9 +16,15 @@ const { project, about, contact, language, pageLink } = Astro.props
     <Logo />
     <HamburgerBtn />
     <ul class="menu flex flex-col  gap-5 pt-14 pl-8 fixed font-medium w-4/5 h-full z-30 bottom-0 right-0 bg-slate-900 md:bg-transparent md:p-0 md:w-auto md:h-auto md:static md:flex-row md:text-lg md:gap-7">
-        <a class="cursor-pointer text-xl hover:text-cyan-500 transition md:text-lg" href="#projects"><li>{ project }</li></a>
-        <a class="cursor-pointer text-xl hover:text-cyan-500 transition md:text-lg" href="#about"><li>{ about }</li></a>
-        <a class="cursor-pointer text-xl hover:text-cyan-500 transition md:text-lg" href="https://www.linkedin.com/in/facundo-caceres-dev" target="_blank" rel="noopener noreferrer"><li>{ contact }</li></a>
+        <li>
+            <a class="cursor-pointer text-xl hover:text-cyan-500 transition md:text-lg" href="#projects">{ project }</a>
+        </li>
+        <li>
+            <a class="cursor-pointer text-xl hover:text-cyan-500 transition md:text-lg" href="#about">{ about }</a>
+        </li>
+        <li>    
+            <a class="cursor-pointer text-xl hover:text-cyan-500 transition md:text-lg" href="https://www.linkedin.com/in/facundo-caceres-dev" target="_blank" rel="noopener noreferrer">{ contact }</a>
+        </li>
         <div class="flex flex-col mt-5 md:mt-0 md:flex-row gap-5 md:gap-5 md:ml-4 z-10 xl:ml-0 xl:flex-col xl:fixed xl:inset-y-1/2 xl:p-3 xl:pt-5 xl:right-2 xl:gap-5 xl:h-56 xl:transform xl:-translate-x-1/2 xl:-translate-y-1/2 xl:w-auto xl:bg-cyan-300/40 xl:rounded-2xl xl:shadow-md">
             <a href="https://github.com/facudam" target="_blank" title="Github" rel="noopener noreferrer" class="z-20 flex flex-row gap-2 items-center">
                 <img class="h-5 md:w-5 md:h-auto xl:mt-2 xl:w-7" src="github.svg" alt="github" />
