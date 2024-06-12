@@ -15,7 +15,7 @@ const { title, secondTitle, paragraphs } = Astro.props;
         <OldPictCtn src='profile.webp' />
         
         <div class="flex flex-col gap-2">
-            <h3 class="font-semibold ">{ secondTitle }</h3>
+            <h3 class="font-semibold text-lg">{ secondTitle }</h3>
             {
                 paragraphs.map(line => (
                     <p>{ line }</p>
