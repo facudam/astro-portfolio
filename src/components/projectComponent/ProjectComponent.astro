@@ -8,10 +8,11 @@ interface Props {
     codeLink: string,
     website?: string,
     codeBtnText: string,
-    liveBtnText: string
+    liveBtnText: string,
+    isCodeAvailable: boolean
 }
 
-const { title, image, alt, description, tecnologies, codeLink, website, codeBtnText, liveBtnText } = Astro.props;
+const { title, image, alt, description, tecnologies, codeLink, website, codeBtnText, liveBtnText, isCodeAvailable } = Astro.props;
 ---
 
 <div class="flex flex-col gap-5  md:flex-row ">
@@ -32,10 +33,14 @@ const { title, image, alt, description, tecnologies, codeLink, website, codeBtnT
         </div>
 
         <div class="flex gap-3 mt-5">
-            <a class="flex justify-center items-center gap-1 w-20 px-4 py-1 rounded-lg bg-slate-200 hover:bg-slate-50 transition-all" target="_blank" href={ codeLink }>
-                <img class="w-6" src="github.webp" alt="github"/>
-                <span class="text-slate-900 font-semibold">{ codeBtnText }</span>
-            </a>
+            {
+                isCodeAvailable
+                    && <a class="flex justify-center items-center gap-1 w-20 px-4 py-1 rounded-lg bg-slate-200 hover:bg-slate-50 transition-all" target="_blank" href={ codeLink }>
+                        <img class="w-6" src="github.webp" alt="github"/>
+                        <span class="text-slate-900 font-semibold">{ codeBtnText }</span>
+                    </a>
+            }
+            
             {
                 website &&
                     <a class="flex justify-center items-center gap-1 w-20 px-4 py-1 rounded-lg bg-slate-200 hover:bg-slate-50 transition-all" target="_blank" href={ website }>
